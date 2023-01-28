@@ -11,9 +11,13 @@ File to create a dedicated server for yuzu, using aws t2.micro on us-east-#
 1.3 in aws browser go to IAM section, look for "Access Keys" click, and create new access key, save the file.
 
 1.4 on cmd put aws configure and should look something like this:
+
         AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+        
         AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+        
         Default region name [None]: us-west-2
+        
         Default output format [None]: json
 
 # if you wanna run it by yourself
@@ -44,9 +48,9 @@ File to create a dedicated server for yuzu, using aws t2.micro on us-east-#
 
 2.7 now, it's time to create a .yml to configure the docker image
 
-    check the yuzu.yml on the repo, can open it with visual code or any other editor, once open,change room-name, room-description, preferred-game, preferred-game-id, max_members, token (the token should be assign once you paid for the patreon) and password, in the terminal of aws use cat > yuzu.yml, hit enter, copy and paste the info in yuzu.yml.
+2.8 check the yuzu.yml on the repo, can open it with visual code or any other editor, once open,change room-name, room-description, preferred-game, preferred-game-id, max_members, token (the token should be assign once you paid for the patreon) and password, in the terminal of aws use cat > yuzu.yml, hit enter, copy and paste the info in yuzu.yml.
 
-2.8 the copy and paste docker-compose -f yuzu.yml up -d, hit enter
+2.9 the copy and paste docker-compose -f yuzu.yml up -d, hit enter
     if you see a permision problem use sudo chmod 777 yuzu.yml
 
 You will need to start the daemon using sudo service docker start and use the docker-compose to run the yml file everytime you stop the instance, is important to know that once you stop to use the instance stopped it, to prevent unexpected charges to your credit card.

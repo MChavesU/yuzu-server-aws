@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  yuzu:
+    image: yuzuemu/yuzu-multiplayer-dedicated
+    container_name: yuzu-server
+    ports:
+      - 24872:24872/tcp
+      - 24872:24872/udp
+    command: >
+      --port 24872
+      --room-name "NAME"
+      --room-description "Description"
+      --preferred-game "Game Name"
+      --preferred-game-id 0
+      --max_members 12
+      --token TOKEN_ID
+      --web-api-url https://api.yuzu-emu.org
+      --password pass

@@ -6,8 +6,10 @@ File to create a dedicated server for yuzu, using aws t2.micro on us-east-#
 1 - create a aws account 
 
 # this steps are for terraform, only need to change some info in the file and run it
-1.2 download the awscli and install it
+1.2 download the awscli and install it.
+
 1.3 in aws browser go to IAM section, look for "Access Keys" click, and create new access key, save the file.
+
 1.4 on cmd put aws configure and should look something like this:
         AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
         AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
